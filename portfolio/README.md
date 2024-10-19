@@ -34,4 +34,15 @@ To run this project locally:
 
 ## Available Scripts
 
-In the project directory, you can run:
+
+## Learn More
+
+To learn more about the technologies used in this project:
+
+- [React Documentation](https://reactjs.org/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+
+## Contact
+
+Robel A Gebrewold - [LinkedIn](https://www.linkedin.com/in/robel-gebrewold/) - [GitHub](https://github.com/robel-dev)
