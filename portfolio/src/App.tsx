@@ -76,10 +76,11 @@ function Home() {
   const [filter, setFilter] = useState('all')
 
   const projects = [
-    { id: 1, title: 'Project 1', description: 'A web application built with React', tech: ['React', 'Node.js'], image: 'https://i.postimg.cc/ZnYnywjf/fet.jpg', link: 'https://github.com'},
-    { id: 2, title: 'Project 2', description: 'Mobile app developed using Flutter', tech: ['Flutter', 'Dart'], image: 'https://ibb.co/8Nsgzbj', link: 'https://github.com'},
-    { id: 3, title: 'Project 3', description: 'Backend API built with Express', tech: ['Node.js', 'Express','MongoDB'], image: 'https://ibb.co/cXVm8r7', link: 'https://github.com'},
-  ]
+    { id: 1, title: 'EcoWissen: Sustainability Chatbot Project', description: 'A prototype sustainability chatbot using large language models for the city administration of Freiburg, Germany', tech: ['Python', 'LLMs', 'Sustainability'], image: 'images/EcoWissen.png', link: 'https://github.com/robel-dev/EcoWissen'},
+    { id: 2, title: 'Teraki App', description: 'Teraki Podcast and Audiobook mobile app developed using Flutter both for IOS and Android', tech: ['Flutter', 'Dart'], image: 'images/teraki.png', link: 'https://open.terakiapp.com/'},
+    { id: 3, title: 'The Chemist circuit', description: 'A social media app for chemists using reactjs and nodejs', tech: ['Node.js', 'Express','MongoDB','React'], image: 'images/chemist.png', link: 'https://github.com/robel-dev/the-chemist-circuit'},
+]
+
   
   const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.tech.includes(filter))
 
@@ -98,7 +99,11 @@ function Home() {
            
           </div>
           <div className="md:w-1/2">
-            <img src="https://i.postimg.cc/ZnYnywjf/fet.jpg" alt="Robel A Gebrewold" className="rounded-full mx-auto w-64 h-64" />
+          <img 
+  src="images/profile.jpeg" 
+  alt="Robel A Gebrewold" 
+  className="rounded-full mx-auto w-64 h-64 object-cover object-center"
+/>
           </div>
         </div>
       </section>
@@ -147,26 +152,31 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map(project => (
 
-              <Card key={project.id} className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-300">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map(tech => (
-                      <Badge key={tech} variant="secondary" className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">{tech}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  {/* <Button asChild className="w-full bg-white dark:bg-gray-700 text-black dark:text-white border border-black dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-black dark:hover:text-white"> */}
-                    <Button>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-                  </Button>
-                </CardFooter>
-              </Card>
+<Card key={project.id} className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+<CardHeader>
+  <CardTitle className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</CardTitle>
+  <CardDescription className="text-gray-600 dark:text-gray-300">{project.description}</CardDescription>
+</CardHeader>
+<CardContent>
+  <div className="overflow-hidden rounded-lg mb-4">
+    <img 
+      src={project.image} 
+      alt={project.title} 
+      className="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110" 
+    />
+  </div>
+  <div className="flex flex-wrap gap-2">
+    {project.tech.map(tech => (
+      <Badge key={tech} variant="secondary" className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">{tech}</Badge>
+    ))}
+  </div>
+</CardContent>
+<CardFooter>
+  <Button asChild className="w-full">
+    <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+  </Button>
+</CardFooter>
+</Card>
               
             ))}
           </div>
