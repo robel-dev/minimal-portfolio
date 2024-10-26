@@ -109,10 +109,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <p className="text-gray-600 dark:text-gray-300">&copy; {new Date().getFullYear()} Robel A Gebrewold. All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400">
+            <a href="https://www.linkedin.com/in/robel-gebrewold/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white">
+            <a href="https://github.com/robel-dev" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white">
               <Github className="w-6 h-6" />
             </a>
           </div>
