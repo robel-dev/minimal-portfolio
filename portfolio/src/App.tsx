@@ -171,21 +171,22 @@ function Home() {
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Frontend</h3>
-                <p className="text-gray-600 dark:text-gray-300">React, Vue, Angular</p>
+                <p className="text-gray-600 dark:text-gray-300">React, JavaScript/TypeScript, C# Blazor</p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Backend</h3>
-                <p className="text-gray-600 dark:text-gray-300">Node.js, Express, Django</p>
+                <p className="text-gray-600 dark:text-gray-300">Node.js, Express, Python (Flask/Django)</p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Mobile</h3>
-                <p className="text-gray-600 dark:text-gray-300">React Native, Flutter</p>
+                <p className="text-gray-600 dark:text-gray-300">Flutter</p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Database</h3>
-                <p className="text-gray-600 dark:text-gray-300">MongoDB, PostgreSQL</p>
+                <p className="text-gray-600 dark:text-gray-300">MongoDB, PostgreSQL, Firebase</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
